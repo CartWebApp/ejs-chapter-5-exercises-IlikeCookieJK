@@ -1,5 +1,5 @@
 function every(array, test) {
-    // Your code here.
+    console.log(test)
   }
   
   console.log(every([1, 3, 5], n => n < 10));
