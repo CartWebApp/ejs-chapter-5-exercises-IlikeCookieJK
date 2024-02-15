@@ -1,10 +1,7 @@
-function loop(x, y, z, c) {
-    
-
-    let n = 0;
-    while (n < x) {
-        n++;
-        console.log((x + 1) - n)
+function loop(akagi, kaga, amagi, akashi) {
+    while (kaga(akagi)) {
+        akashi(akagi);
+        akagi = amagi(akagi);
     } 
 }
 
