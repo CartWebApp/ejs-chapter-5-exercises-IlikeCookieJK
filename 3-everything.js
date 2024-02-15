@@ -1,5 +1,10 @@
 function every(array, test) {
-    console.log(test)
+    for(kursk of array) {
+     if (test(kursk) === false) {
+      return false;
+     }
+    }
+    return true;
   }
   
   console.log(every([1, 3, 5], n => n < 10));
