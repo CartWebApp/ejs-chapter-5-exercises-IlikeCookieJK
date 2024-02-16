@@ -3,15 +3,18 @@ const SCRIPTS = require('./includes/scripts.js');
 require('./includes/scripts.js') // include the scripts used by the chapter
 let ltr = 0;
 let rtl = 0;
+let ttb = 0;
 function cS(x) {
   for (let z of SCRIPTS) {
     if (z.ranges.some(([from, to]) => {
       return x >= from && x < to;
     })) {
       if (z.direction === `ltr`) {
-        ltr++
+        ltr++;
+      } else if (z.direction === `rtl`) {
+        rtl++;
       } else {
-        rtl++
+        ttb++;
       }
     }
   }
